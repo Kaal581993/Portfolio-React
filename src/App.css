@@ -1,0 +1,756 @@
+  @import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+
+
+#root {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    /* background: #005150ff; */
+    /* background: linear-gradient(#004143, #001e07, #ff0000, #8d4e04, #6324b7, #000); */
+    --arc-rotation-duration: 4s; /* full rotation time, change to speed up/slow down */
+
+  }
+
+* {
+  pointer-events: auto !important;
+  box-sizing: border-box;
+  /* width: 100%; */
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.topbar-social-media-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 35%;
+}
+
+small.topbar-icons {}
+
+span.social-media.f {
+    padding: 4pt 11pt;
+    font-size: 20pt;
+    font-family: sans-serif;
+    font-weight: 800;
+    background: #33ceb7ff;
+    color: #242424;
+    border-radius: 5pt;
+}
+
+span.social-media.x {
+    padding: 4pt 7pt;
+    font-size: 20pt;
+    font-family: sans-serif;
+    font-weight: 800;
+    background: #33ceb7ff;
+    color: #242424;
+    border-radius: 5pt;
+}
+
+
+
+span.social-media.in {
+    padding: 4pt 8pt;
+    font-size: 20pt;
+    font-family: sans-serif;
+    font-weight: 800;
+    background: #33ceb7ff;
+    color: #242424;
+    border-radius: 5pt;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    background: #4f0000;
+    padding: 1em;
+    border-radius: 5pt;
+    flex: 1 1 200px;
+    margin-bottom: 25pt;
+    opacity: 0;                /* Start invisible */
+    transform: translateY(50px); /* Start slightly lower */
+    animation: aboutFadeSlide 1s ease-out forwards;
+}
+
+/* Animation definition */
+@keyframes aboutFadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+span.about-abstract {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    flex: 1 1 200px;
+
+
+}
+span.about-abstract p {
+    text-align: start;
+    flex: 1 1 200px;
+    background: rgb(141 10 10);
+    border-radius: 5pt;
+    padding: 2em;
+    height: 22em;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    /* Start hidden */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animation keyframes */
+@keyframes paragraphFadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Trigger animation in sequence on hover */
+.about-me span.about-abstract p:nth-child(1) {
+    animation: paragraphFadeSlide 0.5s ease-out forwards;
+    animation-delay: 0.1s;
+}
+.about-me span.about-abstract p:nth-child(2) {
+    animation: paragraphFadeSlide 0.5s ease-out forwards;
+    animation-delay: 0.4s;
+}
+.about-me span.about-abstract p:nth-child(3) {
+    animation: paragraphFadeSlide 0.5s ease-out forwards;
+    animation-delay: 0.7s;
+}
+.about-me span.about-abstract p:nth-child(4) {
+    animation: paragraphFadeSlide 0.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+
+.work-details-container {
+    background: #4f0000;
+    border-radius: 5pt;
+    padding: 2em;
+}
+
+.work-card-individual {
+    background: #8d0a0a;
+    border-radius: 5pt;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 85%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+}
+
+p.responsibilities {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.work-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.work-details-container {
+    display: flex;
+}
+
+p.responsibilities li {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: -webkit-left;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+span.about-abstract {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    flex-direction: row;
+}
+
+span.about-abstract p {
+    text-align: start;
+}
+
+
+
+
+
+.projects-list {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: blueviolet;
+    margin: 2em 0;
+    border-radius: 5pt;
+}
+
+
+section.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: blueviolet;
+    border-radius: 5pt;
+    margin: 2em 0;
+    padding: 4em;
+}
+
+.project-card-content {
+    padding: 2em;
+    background: #33095b;
+    margin: 2em;
+    border-radius: 5pt;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+ul.highlights {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+svg {
+    position: fixed;
+    z-index: 2;
+    width: 40%;
+}
+
+
+.project-card-content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.skill-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: blueviolet;
+    padding: 2em;
+    border-radius: 5pt;
+    gap: 6em;
+}
+
+.skill-set-card {
+  display: grid; /* Defines the container as a grid */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Creates responsive columns */
+  gap: 20px; /* Adds space between grid items */
+  padding: 20px;
+}
+
+.skill-card {
+    background: #33095b;
+    padding: 3em;
+    border-radius: 5pt;
+    margin: 2em;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+ul.skills-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.main {
+    margin-top: 15em;
+    z-index: 10;
+    opacity: 0;                /* Start invisible */
+    transform: translateY(350px); /* Start slightly lower */
+    animation: aboutFadeSlide 1s ease-out forwards;    
+}
+
+.social-network {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.contact-form {
+    background: linear-gradient(91deg, black, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 3pt;
+    padding: 2em;
+    border-radius: 5pt;
+}
+
+.about-me h1 {
+    padding: 1em;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    margin-top: 15em;
+}
+
+.contact-form-container {
+    display: flex;
+    width: 80%;
+    gap:5pt;
+    padding: 2em;
+}
+
+.contact-form-base {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(91deg, #190130, transparent);
+    border-radius: 5pt;
+    margin: 10em 0;
+}
+
+input.form-text {
+    width: 30em;
+    padding: 5pt;
+    border-radius:2pt;
+    background:white;
+    border:1px solid white;
+    color:#00002e;
+}
+
+
+
+textarea.form-text-box {
+    width: 30em;
+    padding: 5pt;
+    border-radius: 2pt;
+    background: white;
+    border: 1px solid white;
+    color: #00002e;
+}
+
+.select {
+    width: 30em;
+    padding: 5pt;
+    border-radius: 2pt;
+    background: white;
+    border: 1px solid white;
+    color: #00002e;
+}
+
+button.form-button {
+    border-radius: 3pt;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #271f9f;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    width: 25em;
+
+}
+
+a.nav-background {
+    /* background: #006342; */
+    padding: 6pt;
+    border-radius: 8pt;
+    color: white;
+    width: 80pt;
+    width: 120pt;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+a.nav-background:hover {
+ transform: translateX(10pt);
+ transition: transform 0.6s ease;
+
+}
+
+
+
+.Arc-Reactor { 
+    width: 146px;
+    bottom: 60.7%;
+    position: fixed;
+    z-index: 23;
+    fill: aqua;
+    left: 44pt;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    will-change: transform;
+    animation: spin-clockwise 2s linear infinite;
+}
+
+
+:root { --arc-rotation-duration: 6s; --arc-radius: 130px; }
+
+
+/* place the svg out on the +X axis at the radius */
+
+.Arc-reactor::before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 128, 0.6);
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
+    animation: reactorRing 4s infinite linear;
+    transform: rotate(320.781deg);
+    transform-origin: 50% 50%;
+
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-anti-clockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.menu-container {
+    /* background: #000; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    align-content: center;
+    z-index: 15;
+    top: 3em;
+    width: '160px';
+    height: '160px';
+    border-radius: '50%';
+    background: '#006342';
+    color: 'white';
+    border: 'none';
+    cursor: 'pointer';
+    z-index: 20;
+}
+
+
+.menu-list, nav {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    gap: 10pt;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+/* Arc Reactor Center Glow */
+.menu-container button {
+  position: fixed;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.7),
+              0 0 40px rgba(0, 255, 128, 0.5),
+              0 0 60px rgba(0, 255, 128, 0.3);
+  animation: reactorPulse 2s infinite ease-in-out;
+}
+
+/* Glowing ring around the toggle */
+.menu-container button::before {
+  content: '';
+  position: absolute;
+  top: -17px;
+  left: -17px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  border-radius: 50%;
+  border: 2px solid rgba(0, 255, 128, 0.6);
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
+  animation: reactorRing 4s infinite linear;
+}
+
+/* Extra faint outer aura */
+.menu-container button::after {
+  content: '';
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  width: calc(100% + 70px);
+  height: calc(100% + 70px);
+  border-radius: 50%;
+  background: radial-gradient(rgba(0, 255, 128, 0.15), transparent 70%);
+  z-index: -1;
+}
+
+/* Pulse animation for center button */
+@keyframes reactorPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 128, 0.7),
+                0 0 40px rgba(0, 255, 128, 0.5),
+                0 0 60px rgba(0, 255, 128, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 128, 1),
+                0 0 50px rgba(0, 255, 128, 0.7),
+                0 0 80px rgba(0, 255, 128, 0.5);
+  }
+}
+
+/* Slow rotating ring effect */
+@keyframes reactorRing {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; border-radius: 2pt; grid-gap: 20pt; background: #f70000;}
+.div2 { grid-area: 1 / 2 / 2 / 4; border-radius: 2pt; grid-gap: 20pt; background: #00eeff;}
+.div3 { grid-area: 2 / 1 / 3 / 4; border-radius: 2pt; grid-gap: 20pt; background: #864141;}
+.div4 { grid-area: 3 / 1 / 6 / 3; border-radius: 2pt; grid-gap: 20pt; background: #00ff1a;}
+.div5 { grid-area: 1 / 4 / 2 / 5; border-radius: 2pt; grid-gap: 20pt; background: #003cff;}
+.div6 { grid-area: 1 / 5 / 2 / 6; border-radius: 2pt; grid-gap: 20pt; background: #ffbf00;}
+.div7 { grid-area: 2 / 4 / 3 / 5; border-radius: 2pt; grid-gap: 20pt; background: #ff00ff;}
+.div8 { grid-area: 2 / 5 / 3 / 6; border-radius: 2pt; grid-gap: 20pt; background: #20006c;}
+.div9 { grid-area: 3 / 3 / 6 / 6; border-radius: 2pt; grid-gap: 20pt; background: #4d4747;}
+
+
+
+
+.arc-container {
+  position: relative;       /* 1: Allows absolute positioning inside */
+  width: 200px;              /* 2: Outer circle width */
+  height: 200px;             /* 3: Outer circle height */
+  margin: 50px auto;         /* 4: Center container horizontally */
+  border-radius: 50%;        /* 5: Makes the outer shape perfectly circular */
+  background: radial-gradient(circle, #0ff 0%, #005 80%); /* 6: Arc reactor glow */
+  box-shadow: 0 0 30px #0ff, inset 0 0 30px #0ff; /* 7: Inner & outer glow */
+}
+
+.arc-item {
+  position: absolute;        /* 8: Allows us to position anywhere in the container */
+  top: 50%;                  /* 9: Start at the center vertically */
+  left: 50%;                 /* 10: Start at the center horizontally */
+  transform-origin: 0 -80px; /* 11: Pivot point from center (radius) */
+  transform: rotate(0deg) translateX(-50%) translateY(-50%);
+  /* 12: Initial angle + move item to circle edge */
+}
+
+.arc-item img {
+  width: 30px;               /* 13: Icon/image size */
+  height: 30px;              /* 14: Icon/image height */
+}
+
+
+
+
+/********************************************************************************************/
+
+
+@media (max-width: 1200px) {
+  span.about-abstract p {
+    text-align: start;
+    flex: 1 1 200px;
+    background: rgb(141 10 10);
+    border-radius:5pt;
+    padding:2em;
+    height: 25em;
+}
+}
+
+
+/*Mobile Devices*/
+@media (max-width: 1024px) {
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 200px;
+    
+
+}
+
+span.about-abstract {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    flex: 1 1 200px;
+
+}
+
+span.about-abstract p {
+    flex-direction: column;
+    text-align: start;
+    flex: 1 1 200px;
+        height: 16em;
+    background: rgb(141 10 10);
+
+
+}
+.work-details-container {
+    background: #4f0000;
+    border-radius: 5pt;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card-container{
+  display: flex;
+  flex-direction: column;
+}
+}
+
+@media (max-width: 940px) {
+  span.about-abstract p {
+    flex-direction: column;
+    text-align: start;
+    flex: 1 1 200px;
+    background: rgb(141 10 10);
+}
+
+section.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card-container{
+  display: flex;
+  flex-direction: column;
+}
+}
+
+@media screen and (max-width:620px){
+        .project-card-content-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .skill-set-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+}
