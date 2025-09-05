@@ -5,8 +5,16 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: [
-      'devserver-main--statuesque-bunny-175c85.netlify.app'
-    ]
-  }
+    // Allow Netlify preview host
+    allowedHosts: ['devserver-main--statuesque-bunny-175c85.netlify.app'],
+
+    // Enable polling watcher to reduce Netlify warnings
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+
+    // Optional: allow external access if needed
+    host: true,
+  },
 })
