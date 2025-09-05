@@ -6,7 +6,8 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    /* background: #005150ff; */
+    background: #005150ff;
+    color:#fff;
     /* background: linear-gradient(#004143, #001e07, #ff0000, #8d4e04, #6324b7, #000); */
     --arc-rotation-duration: 4s; /* full rotation time, change to speed up/slow down */
 
