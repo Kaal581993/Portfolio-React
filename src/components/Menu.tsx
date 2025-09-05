@@ -69,7 +69,7 @@ const Menu: React.FC = () => {
           borderRadius: '50%',
           border: 'none',
           cursor: 'pointer',
-          backGround:'black',
+          background:'black',
           zIndex: 20
         }}
       >
