@@ -4,4 +4,9 @@ import react from '@vitejs/plugin-react-swc'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    allowedHosts: [
+      'devserver-main--statuesque-bunny-175c85.netlify.app'
+    ]
+  }
 })
