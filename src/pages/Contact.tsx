@@ -68,6 +68,7 @@ const Contact: React.FC = () => {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          netlify
           onSubmit={handleSubmit}
         >
           {/* Netlify hidden inputs */}
