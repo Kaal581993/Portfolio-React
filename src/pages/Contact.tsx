@@ -60,7 +60,13 @@ const Contact: React.FC = () => {
         method: "POST",
         body: formData,
       })
-        .then(() => setSubmitted(true))
+        .then(() => {
+          // ✅ Inline success (default)
+          setSubmitted(true);
+
+          // ✅ Optional redirect (uncomment if you want thank-you page)
+          // window.location.href = "/thank-you";
+        })
         .catch((error) => {
           console.error("Form submission error:", error);
           alert("There was a problem submitting the form. Please try again.");
