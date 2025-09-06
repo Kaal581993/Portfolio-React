@@ -23,6 +23,33 @@
 }
 
 
+
+input[type="text"] {
+    height: 26pt;
+    border-radius: 3pt;
+    padding: 5pt;
+}
+
+input[type="email"] {    height: 26pt;
+    border-radius: 3pt;
+    padding: 5pt;}
+
+select {
+    height: 26pt;
+    border-radius: 3pt;
+    padding: 5pt;
+}
+
+select {}
+
+textarea {
+    height: 82pt;
+    border-radius: 3pt;
+    padding: 5pt;
+}
+
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
