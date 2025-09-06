@@ -48,12 +48,23 @@ const Contact: React.FC = () => {
     return Object.keys(tempErrors).length === 0;
   };
 
-  // Handle form submit
-  const handleSubmit = (e: React.FormEvent) => {
+  // Handle form submit with manual POST to Netlify
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (validate()) {
-      setSubmitted(true);
-      // Netlify will handle submission
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        body: formData,
+      })
+        .then(() => setSubmitted(true))
+        .catch((error) => {
+          console.error("Form submission error:", error);
+          alert("There was a problem submitting the form. Please try again.");
+        });
     }
   };
 
