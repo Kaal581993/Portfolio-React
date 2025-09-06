@@ -6,9 +6,9 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    background: #005150ff;
+/*     background: #005150ff; */
     color:#fff;
-    /* background: linear-gradient(#004143, #001e07, #ff0000, #8d4e04, #6324b7, #000); */
+    background: linear-gradient(#004143, #001e07, #ff0000, #8d4e04, #6324b7, #000);
     --arc-rotation-duration: 4s; /* full rotation time, change to speed up/slow down */
 
   }
@@ -92,7 +92,7 @@ textarea {
     align-content: center;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
     width: 35%;
 }
 
@@ -130,6 +130,22 @@ span.social-media.in {
     border-radius: 5pt;
 }
 
+span.social-media.inst {
+    width: 7em;
+    height: 4em;
+    display: flex;
+    flex-direction:column;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+span.social-media.yt {
+    width: 7.5em !important;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+}
+
 .about-me {
     display: flex;
     flex-direction: column;
@@ -145,6 +161,8 @@ span.social-media.in {
     transform: translateY(50px); /* Start slightly lower */
     animation: aboutFadeSlide 1s ease-out forwards;
 }
+
+
 
 /* Animation definition */
 @keyframes aboutFadeSlide {
@@ -469,9 +487,11 @@ button.form-button {
 
 a.nav-background {
     /* background: #006342; */
+    background: linear-gradient(89deg, #00ffff, #33095b);
     padding: 6pt;
     border-radius: 8pt;
-    color: white;
+    color: #00123d;
+    font-weight: 700;
     width: 80pt;
     width: 120pt;
     display: flex;
