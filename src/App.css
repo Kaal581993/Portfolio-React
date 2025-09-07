@@ -770,6 +770,8 @@ section.project-card {
 }
 }
 
+
+
 @media (max-width: 940px) {
   span.about-abstract p {
     flex-direction: column;
@@ -787,6 +789,12 @@ section.project-card {
   display: flex;
   flex-direction: column;
 }
+  svg.Arc-Reactor {
+    bottom: 56.9%;
+}
+body {
+    width: 100vh;
+}
 }
 
 @media screen and (max-width:620px){
@@ -802,4 +810,72 @@ section.project-card {
             gap: 20px;
             padding: 20px;
         }
+      svg.Arc-Reactor {
+        bottom: 69.5%;
+        }
+
+span.about-abstract {
+    width: 90%;
+    height: auto;
+}
+
+span.about-abstract p {height: 24em;}
+
+.work-cards {
+    width: 100%;
+    padding-top: 4em;
+}
+
+.project-card-content-container {display: flex;flex-direction: column;}
+
+.project-card-content {
+    width: 100%;
+    margin-left: 0em!important;
+}
+
+body {
+    width: 100vh;
+}
+
+.Arc-Reactor-Container {
+    bottom: 70% !important;
+}
+}
+/*====================================================================================*/
+@media screen and (max-width:480px){
+
+  
+svg.Arc-Reactor {
+    bottom: 76.5%;
+}
+
+p {}
+
+span.about-abstract {
+    width: 90%;
+    height: auto;
+}
+
+span.about-abstract p {height: 24em;}
+
+.work-cards {
+    width: 100%;
+    padding-top: 4em;
+}
+
+.project-card-content-container {display: flex;flex-direction: column;}
+
+.project-card-content {
+    width: 100%;
+    margin-left: 0em!important;
+}
+
+body {
+    width: 100vh;
+}
+
+.Arc-Reactor-Container {
+    bottom: 70% !important;
+}
+
 }
